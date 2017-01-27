@@ -12,15 +12,14 @@ problems.  Finally, there's the problem of exporting.  If I have videos, how do
 I export this to a pdf?  How high resolution do my plots need to be?  To solve
 (some) of these problems, `slides` was created.  `slides` is a template engine
 that allows you to write presentations in `markdown`.  It targets:
-
-- [ ] Simple (and accurate) conversion from the `markdown` files to `reveal.js`,
+-   [ ] Simple (and accurate) conversion from the `markdown` files to `reveal.js`,
   `pdflatex`, and Powerpoint presentations.
-- [ ] LaTeX math supported
-- [ ] bibtex bibliography supported
-- [ ] video inclusion with still file for `pdflatex` export
-- [ ] build system that watches data and rebuilds a plot if the data or plotting
+-   [ ] LaTeX math supported
+-   [ ] bibtex bibliography supported
+-   [ ] video inclusion with still file for `pdflatex` export
+-   [ ] build system that watches data and rebuilds a plot if the data or plotting
   updates
-- [ ] vector plot files (where possible)
+-   [ ] vector plot files (where possible)
 
 ## Example
 
@@ -28,34 +27,29 @@ It may be best to first show an example of how this would be used
 
 ```markdown
 
-{{title}}
-# Title of the presentation here
+#{.title} Title of the presentation here
 {{author}}Alex Hagen
 {{subtitle}}An example of how to use markdown to reveal.js/python/powerpoint
   conversion
 
-{{twocolumn}}
-# Title of the slide
+#{.twocolumn} Title of the slide
 
-{{column}}
-## Title of the column
+##{.column} Title of the column
 
 - Some bullet points
 - Some more bullet points
 
-{{column}}
+##{.column}
 
 {{chart}}something.svg
 
-{{tworow}}
-# Title of the slide
+#{.tworow} Title of the slide
 
-{{row}}
-## Title of the row
+##{.row} Title of the row
 - Bullet here
 - Bullet here
 
-{{row}}
+##{.row}
 
 {{chart}}somethingmore.svg
 
