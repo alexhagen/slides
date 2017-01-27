@@ -21,3 +21,42 @@ that allows you to write presentations in `markdown`.  It targets:
 - [ ] build system that watches data and rebuilds a plot if the data or plotting
   updates
 - [ ] vector plot files (where possible)
+
+## Example
+
+It may be best to first show an example of how this would be used
+
+```markdown
+
+{{title}}
+# Title of the presentation here
+{{author}}Alex Hagen
+{{subtitle}}An example of how to use markdown to reveal.js/python/powerpoint
+  conversion
+
+{{twocolumn}}
+# Title of the slide
+
+{{column}}
+## Title of the column
+
+- Some bullet points
+- Some more bullet points
+
+{{column}}
+
+{{chart}}something.svg
+
+{{tworow}}
+# Title of the slide
+
+{{row}}
+## Title of the row
+- Bullet here
+- Bullet here
+
+{{row}}
+
+{{chart}}somethingmore.svg
+
+```
